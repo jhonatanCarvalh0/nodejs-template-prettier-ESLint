@@ -1,12 +1,7 @@
-const numero = 2;
-console.info('numero: ' + numero);
+const numero = '2';
+console.info(`numero: ${numero}`);
 
-if (
-    variavelComnomeGrande == 2
-    && variavelComnomeGrande == 2
-    && variavelComnomeGrande == 2
-    && variavelComnomeGrande == 2
-    && variavelComnomeGrande == 2
-) {
-    console.log('numero é igual 2');
+if (numero === 2 && numero === 2) {
+    console.info('data');
+    console.info(`data${numero}`);
 }
