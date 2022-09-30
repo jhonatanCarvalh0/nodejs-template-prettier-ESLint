@@ -6,6 +6,17 @@
     "scripts": {
         "prettier": "npx prettier --write --ignore-unknown ."
     },
+    "husky": {
+        "hooks": {
+            "pre-commit": "npx lint-staged"
+        }
+    },
+    "lint-staged": {
+        "src/**/*.js": [
+            "npx pretty-quick --staged",
+            "npx eslint --fix src --ext .js"
+        ]
+    },
     "keywords": [],
     "author": "",
     "license": "ISC",
@@ -13,6 +24,9 @@
         "eslint": "^8.24.0",
         "eslint-config-airbnb-base": "^15.0.0",
         "eslint-plugin-import": "^2.26.0",
-        "prettier": "npm:@btmills/prettier@^2.7.1"
+        "husky": "^4.3.8",
+        "lint-staged": "^13.0.3",
+        "prettier": "npm:@btmills/prettier@^2.7.1",
+        "pretty-quick": "^3.1.3"
     }
 }
